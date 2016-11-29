@@ -12,7 +12,3 @@ libraryDependencies ++= Seq(
   "net.databinder" %% "unfiltered-jetty" % "$unfiltered_version$",
   "net.databinder" %% "unfiltered-specs2" % "$unfiltered_version$" % "test"
 )
-
-resolvers ++= Seq(
-  "java m2" at "http://download.java.net/maven/2"
-)
