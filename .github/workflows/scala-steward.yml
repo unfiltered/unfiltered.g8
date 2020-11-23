@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Generate token
       id: generate_token
+      if: ${{ github.repository_owner == 'unfiltered' }}
       uses: tibdex/github-app-token@v1
       with:
         app_id: 89698
