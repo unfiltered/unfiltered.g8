@@ -16,7 +16,7 @@ scalacOptions ++= PartialFunction.condOpt(CrossVersion.partialVersion(scalaVersi
 }.toList.flatten
 
 Seq(Compile, Test).flatMap(c =>
-  scalacOptions in (c, console) --= unusedWarnings
+  c / console / scalacOptions --= unusedWarnings
 )
 
 scalacOptions ++= "-deprecation" :: "unchecked" :: "-feature" :: Nil
