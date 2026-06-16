@@ -17,11 +17,12 @@ jobs:
     steps:
     - uses: actions/setup-java@v5
       with:
-        java-version: 11
+        java-version: 17
         distribution: temurin
     - uses: actions/checkout@v6
     - uses: sbt/setup-sbt@v1
     - uses: coursier/cache-action@v8
     - run: sbt -v
+           --server
            "set Test / g8 / g8Properties ~= { _ + (\"scala_version\" -> \"${{ matrix.scala }}\")}"
            g8Test

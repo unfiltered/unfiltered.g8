@@ -1,5 +1,8 @@
-import scala.collection.JavaConverters._
+import scala.jdk.CollectionConverters._
 import java.lang.management.ManagementFactory
+
+// https://github.com/foundweekends/giter8/issues/1049
+scriptedKeepTempDirectory := false
 
 scriptedBufferLog := false
 
